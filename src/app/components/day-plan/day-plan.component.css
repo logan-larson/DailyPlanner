@@ -3,29 +3,3 @@ h1 {
   display: flex;
   justify-content: center;
 }
-
-.center {
-  display: flex;
-  justify-content: center;
-}
-
-button {
-  font: 32px "Fira Sans", sans-serif;
-  width: 10%;
-}
-
-#task {
-  font: 32px "Fira Sans", sans-serif;
-  display: flex;
-  margin-bottom: 15px;
-  justify-content: center;
-}
-
-#time {
-  font: 32px "Fira Sans", sans-serif;
-}
-
-#title {
-  font: 32px "Fira Sans", sans-serif;
-  margin-left: 3%;
-}

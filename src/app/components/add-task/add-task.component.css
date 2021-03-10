@@ -1,0 +1,23 @@
+.container {
+  width: 10%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#time {
+  font: 32px "Fira Sans", sans-serif;
+  width: 100px;
+}
+
+#title {
+  font: 32px "Fira Sans", sans-serif;
+  width: 200px;
+}
+
+button {
+  font-size: 24px;
+  width: 43px;
+  height: 43px;
+}
