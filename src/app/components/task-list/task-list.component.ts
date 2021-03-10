@@ -11,14 +11,9 @@ export class TaskListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.tasks = [
-      { id: 1, time: 8, title: 'Breakfast' },
-      { id: 2, time: 12, title: 'Lunch' },
-    ];
-  }
+  ngOnInit(): void {}
 
-  deleteTask(task: Task): void {
-    this.tasks = this.tasks.filter((t) => t.id != task.id);
+  addTask(todo) {
+    this.tasks.push(todo);
   }
 }

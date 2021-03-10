@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Task } from 'src/app/interfaces/task';
 
 @Component({
   selector: 'app-add-task',
@@ -6,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-task.component.css'],
 })
 export class AddTaskComponent implements OnInit {
+  time: number;
+  title: string;
+  @Output() addTask: EventEmitter<any> = new EventEmitter<any>();
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  addTask(): void {}
+  onSubmit(): void {
+    const task: Task = {
+      id: Math.floor(Math.random() * 100),
+      time: this.time,
+      title: this.title,
+    };
+    this.addTask.emit(task);
+
+    this.time = this.time + 100;
+    this.title = '';
+  }
 }
