@@ -15,4 +15,8 @@ export class TaskListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  addTask(todo) {
+    this.tasks.push(todo);
+  }
 }
