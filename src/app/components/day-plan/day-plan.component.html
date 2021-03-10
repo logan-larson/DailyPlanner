@@ -1,0 +1,17 @@
+<h1>Day Plan</h1>
+
+<div>
+  <div *ngFor="let task of tasks" id="taskList">
+    <div id="task">
+      <div id="time">
+        {{ task.time }}
+      </div>
+      <div id="title">
+        {{ task.title }}
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <button (click)="newTask()">+</button>
+  </div>
+</div>

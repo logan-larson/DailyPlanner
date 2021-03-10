@@ -1,5 +1,6 @@
 h1 {
   font: 72px "Fira Sans", sans-serif;
+  text-decoration: underline;
   display: flex;
   justify-content: center;
 }
