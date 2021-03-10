@@ -1,15 +1,17 @@
 .container {
   display: flex;
   margin: 0 auto;
-  width: 35%;
+  width: 20%;
   justify-content: space-between;
   margin-bottom: 10px;
+  border: medium solid black;
+  border-radius: 5px;
 }
 
 #task {
   font: 32px "Fira Sans", sans-serif;
   display: flex;
-  width: 80%;
+  width: 70%;
   justify-content: space-between;
   padding: 5px;
 }
@@ -28,5 +30,5 @@ button {
   height: 43px;
   width: 43px;
   margin-top: 2px;
-  margin-right: -4px;
+  margin-right: 2px;
 }

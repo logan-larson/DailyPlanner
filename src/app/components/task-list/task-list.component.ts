@@ -7,12 +7,18 @@ import { Task } from '../../interfaces/task';
   styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent implements OnInit {
-  tasks: Task[] = [
-    { id: 1, time: 8, title: 'Breakfast' },
-    { id: 2, time: 12, title: 'Lunch' },
-  ];
+  tasks: Task[] = [];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.tasks = [
+      { id: 1, time: 8, title: 'Breakfast' },
+      { id: 2, time: 12, title: 'Lunch' },
+    ];
+  }
+
+  deleteTask(task: Task): void {
+    this.tasks = this.tasks.filter((t) => t.id != task.id);
+  }
 }

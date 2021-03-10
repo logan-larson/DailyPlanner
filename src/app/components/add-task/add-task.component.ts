@@ -10,5 +10,5 @@ export class AddTaskComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  addTask(time: number, title: string): void {}
+  addTask(): void {}
 }
