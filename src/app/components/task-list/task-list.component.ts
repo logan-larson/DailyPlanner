@@ -13,7 +13,11 @@ export class TaskListComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  addTask(todo) {
-    this.tasks.push(todo);
+  addTask(task) {
+    this.tasks.push(task);
+  }
+
+  deleteTask(task): void {
+    this.tasks = this.tasks.filter((t) => t.id != task.id);
   }
 }

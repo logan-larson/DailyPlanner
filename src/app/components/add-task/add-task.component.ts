@@ -17,7 +17,7 @@ export class AddTaskComponent implements OnInit {
 
   onSubmit(): void {
     const task: Task = {
-      id: Math.floor(Math.random() * 100),
+      id: Math.floor(Math.random() * 10000),
       time: this.time,
       title: this.title,
     };
