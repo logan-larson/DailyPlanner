@@ -9,9 +9,12 @@ h1 {
   justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 800px) {
   .container {
     display: flex;
     flex-direction: column;
+  }
+  h1 {
+    font-size: 32px;
   }
 }

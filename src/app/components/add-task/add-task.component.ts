@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/interfaces/task';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-add-task',
@@ -11,21 +12,29 @@ export class AddTaskComponent implements OnInit {
   title: string;
   @Output() addTask: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() {}
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {}
 
   onSubmit(): void {
-    const task: Task = {
-      id: Math.floor(Math.random() * 10000),
-      time: this.time,
-      title: this.title,
-    };
-    this.addTask.emit(task);
+    let tm: string =
+      this.time.toString().length == 5
+        ? this.time.toString()
+        : '0' + this.time.toString();
 
-    this.time = this.time + 100;
+    if (tm != '' && this.title != '') {
+      const task: Task = {
+        time: tm,
+        title: this.title,
+      };
+      this.taskService.addTask(task);
+    }
+
+    //this.addTask.emit(task);
+
     this.title = '';
+    this.time += 100;
 
-    document.getElementById("time").focus();
+    document.getElementById('time').focus();
   }
 }

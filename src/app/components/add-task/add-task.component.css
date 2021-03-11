@@ -1,5 +1,4 @@
 .container {
-  width: 15%;
   margin: 0 auto;
   margin-bottom: 20px;
   display: flex;
@@ -15,6 +14,7 @@
 
 #title {
   font: 32px "Fira Sans", sans-serif;
+  width: 250px;
 }
 
 .btn {
@@ -24,8 +24,16 @@
   flex-shrink: 0;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+  #title {
+    width: 150px;
+    font-size: 18px;
+  }
+  .btn {
+    font-size: 18px;
+  }
   #time {
     width: 45px;
+    font-size: 18px;
   }
 }

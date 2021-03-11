@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "daily-planner-d3208"
+  },
+  "targets": {
+    "daily-planner-d3208": {
+      "hosting": {
+        "daily-planner": [
+          "daily-planner-d3208"
+        ]
+      }
+    }
   }
 }
