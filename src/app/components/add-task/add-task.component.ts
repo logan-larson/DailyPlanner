@@ -25,5 +25,7 @@ export class AddTaskComponent implements OnInit {
 
     this.time = this.time + 100;
     this.title = '';
+
+    document.getElementById("time").focus();
   }
 }
