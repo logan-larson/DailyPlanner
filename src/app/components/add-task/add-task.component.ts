@@ -17,20 +17,13 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
-    let tm: string =
-      this.time.toString().length == 5
-        ? this.time.toString()
-        : '0' + this.time.toString();
-
-    if (tm != '' && this.title != '') {
+    if (this.time.toString() != '' && this.title != '') {
       const task: Task = {
-        time: tm,
+        time: this.time,
         title: this.title,
       };
       this.taskService.addTask(task);
     }
-
-    //this.addTask.emit(task);
 
     this.title = '';
     this.time += 100;

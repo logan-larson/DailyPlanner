@@ -29,15 +29,13 @@ export class TaskService {
       '-' +
       this.currDate.getFullYear().toString();
 
-    console.log(this.dayid);
-
     this.daysCollection = this.store.collection('days');
 
     this.dayDoc = this.daysCollection.doc(this.dayid);
 
     this.tasksCollection = this.daysCollection
       .doc(this.dayid)
-      .collection('tasks');
+      .collection('tasks', (ref) => ref.orderBy('time', 'asc'));
 
     this.tasks = this.tasksCollection.snapshotChanges().pipe(
       map((changes) => {
