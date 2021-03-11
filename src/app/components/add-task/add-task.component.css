@@ -1,23 +1,31 @@
 .container {
-  width: 20%;
+  width: 15%;
   margin: 0 auto;
   margin-bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-flow: row nowrap;
 }
 
 #time {
   font: 32px "Fira Sans", sans-serif;
-  width: 100px;
+  width: 200px;
+  flex-shrink: 0;
 }
 
 #title {
   font: 32px "Fira Sans", sans-serif;
-  width: 200px;
 }
 
 .btn {
   font-size: 24px;
-  width: 43px;
   height: 43px;
+  width: 43px;
+  flex-shrink: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  #time {
+    width: 45px;
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-day-plan',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./day-plan.component.css'],
 })
 export class DayPlanComponent implements OnInit {
+  date: string;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.date = formatDate(new Date(), 'MM/dd/yyyy', 'en');
+  }
 }

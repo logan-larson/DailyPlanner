@@ -8,9 +8,10 @@ import { DayPlanComponent } from './components/day-plan/day-plan.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { TaskComponent } from './components/task/task.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 @NgModule({
-  declarations: [AppComponent, DayPlanComponent, AddTaskComponent, TaskComponent, TaskListComponent],
+  declarations: [AppComponent, DayPlanComponent, AddTaskComponent, TaskComponent, TaskListComponent, TodoListComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
